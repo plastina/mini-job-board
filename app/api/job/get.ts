@@ -1,12 +1,12 @@
 import { prisma } from "../../lib/prisma";
 
 export async function getJobs() {
-  "use server"; // ✅ Apenas no backend
+  "use server";
   return await prisma.job.findMany({ include: { company: true } });
 }
 
 export async function getJob(id: number | string) {
-  "use server"; // ✅ Apenas no backend
+  "use server";
 
   const jobId = Number(id);
   if (isNaN(jobId)) {

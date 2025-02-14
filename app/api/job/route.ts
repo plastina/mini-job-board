@@ -9,7 +9,6 @@ try {
   console.error("❌ Erro ao conectar no banco:", error);
 }
 
-// GET - Listar todas as vagas ou obter uma específica por ID
 export async function GET(req: Request) {
   try {
     console.log("🔍 Recebendo requisição GET /api/job");

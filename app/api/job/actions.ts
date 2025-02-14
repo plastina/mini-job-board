@@ -1,8 +1,6 @@
 "use server";
 import { prisma } from "../../lib/prisma";
 
-// ✅ Agora as Server Actions são separadas!
-
 export async function getJobs() {
   return await prisma.job.findMany({ include: { company: true } });
 }

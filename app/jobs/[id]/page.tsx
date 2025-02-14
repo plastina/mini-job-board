@@ -3,7 +3,7 @@ import { getJob } from "../../api/job/get";
 import BackButton from "../../components/BackButton";
 
 export default async function JobDetailsPage({ params }: { params: { id?: string } }) {
-    if (!params?.id || params.id === "new") { // ✅ Impede erro se for "new"
+    if (!params?.id || params.id === "new") {
         return notFound();
     }
 
